@@ -1,0 +1,26 @@
+[
+    {
+        "maSV": "SV001",
+        "hoTen": "Nguyễn Văn A",
+        "soDT": "0988111222",
+        "email": "vana@gmail.com"
+    },
+    {
+        "maSV": "SV002",
+        "hoTen": "Trần Thị B",
+        "soDT": "0912333444",
+        "email": "tranthib@gmail.com"
+    },
+    {
+        "maSV": "SV003",
+        "hoTen": "Lê Minh C",
+        "soDT": "0934555666",
+        "email": "minhc@gmail.com"
+    },
+    {
+        "maSV": "SV004",
+        "hoTen": "Phạm Quốc D",
+        "soDT": "0977888999",
+        "email": "quocd@gmail.com"
+    }
+]
