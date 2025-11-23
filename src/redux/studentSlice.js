@@ -1,9 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
+import studentData from "../data/sinhvien.json";
 
 const initialState = {
-    students: [],
-    editingStudent: null, // giữ sinh viên đang edit
-    searchKeyword: ""
+    students: studentData,  // <-- load danh sách từ JSON
+    searchKeyword: "",
+    editingStudent: null,
 };
 
 const studentSlice = createSlice({
@@ -31,7 +32,8 @@ const studentSlice = createSlice({
         },
         setSearchKeyword: (state, action) => {
             state.searchKeyword = action.payload;
-        }
+        },
+
     }
 });
 

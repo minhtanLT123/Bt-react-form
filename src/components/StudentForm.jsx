@@ -56,29 +56,32 @@ export default function StudentForm() {
             <div className="grid grid-cols-2 gap-3">
 
                 <div>
-                    <label>Mã SV</label>
+                    <label className="m-1">Mã SV</label>
                     <input
                         className="input"
                         value={form.maSV}
+                        placeholder="Nhập mã sinh viên"
                         onChange={(e) => setForm({ ...form, maSV: e.target.value })}
                     />
                     <p className="text-red-500">{errors.maSV}</p>
                 </div>
 
                 <div>
-                    <label>Họ tên</label>
+                    <label className="m-1">Họ tên</label>
                     <input
                         className="input"
                         value={form.hoTen}
+                        placeholder="Nhập họ tên"
                         onChange={(e) => setForm({ ...form, hoTen: e.target.value })}
                     />
                     <p className="text-red-500">{errors.hoTen}</p>
                 </div>
 
                 <div>
-                    <label>Số ĐT</label>
+                    <label className="m-1">Số ĐT</label>
                     <input
                         className="input"
+                        placeholder="Nhập số điện thoại"
                         value={form.soDT}
                         onChange={(e) => setForm({ ...form, soDT: e.target.value })}
                     />
@@ -86,9 +89,10 @@ export default function StudentForm() {
                 </div>
 
                 <div>
-                    <label>Email</label>
+                    <label className="m-1" >Email</label>
                     <input
                         className="input"
+                        placeholder="Nhập email"
                         value={form.email}
                         onChange={(e) => setForm({ ...form, email: e.target.value })}
                     />
@@ -98,7 +102,7 @@ export default function StudentForm() {
             </div>
 
             <button
-                className="btn btn-primary mt-3"
+                className="btn btn-primary mt-3 bg-green-600 rounded-md hover:scale-110 p-1.5"
                 onClick={handleSubmit}
             >
                 {editingStudent ? "Cập nhật" : "Thêm sinh viên"}

@@ -1,11 +1,9 @@
 import { useDispatch, useSelector } from "react-redux";
 import { deleteStudent, setEditingStudent, setSearchKeyword } from "../redux/studentSlice";
-import studentData from '../data/sinhvien.json'; // Importing student data from JSON
 
 export default function StudentList() {
     const dispatch = useDispatch();
     const { students, searchKeyword } = useSelector(s => s.students);
-
     const filtered = students.filter(s =>
         s.hoTen.toLowerCase().includes(searchKeyword.toLowerCase()) ||
         s.maSV.includes(searchKeyword)
