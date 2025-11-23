@@ -102,7 +102,7 @@ export default function StudentForm() {
             </div>
 
             <button
-                className="btn btn-primary mt-3 bg-green-600 rounded-md hover:scale-110 p-1.5"
+                className="btn btn-primary mt-3 bg-green-600 rounded-md  hover:bg-green-800 transition hover:scale-110 p-1.5"
                 onClick={handleSubmit}
             >
                 {editingStudent ? "Cập nhật" : "Thêm sinh viên"}

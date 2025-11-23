@@ -12,40 +12,41 @@ export default function StudentList() {
     return (
         <div className="mt-5">
 
-            <input
+            {/* <input
                 className="input mb-3"
                 placeholder="Tìm kiếm sinh viên..."
                 onChange={(e) => dispatch(setSearchKeyword(e.target.value))}
-            />
+            /> */}
 
-            <table className="table-auto w-full bg-white shadow">
-                <thead>
-                    <tr>
-                        <th>Mã SV</th>
-                        <th>Họ tên</th>
-                        <th>SĐT</th>
-                        <th>Email</th>
-                        <th>Hành động</th>
+            <table className="table-auto w-full bg-white shadow border border-gray-300">
+                <thead className="bg-gray-100">
+                    <tr className="text-center">
+                        <th className="border border-gray-300 px-4 py-2">Mã SV</th>
+                        <th className="border border-gray-300 px-4 py-2">Họ tên</th>
+                        <th className="border border-gray-300 px-4 py-2">SĐT</th>
+                        <th className="border border-gray-300 px-4 py-2">Email</th>
+                        <th className="border border-gray-300 px-4 py-2">Hành động</th>
                     </tr>
                 </thead>
 
                 <tbody>
                     {filtered.map(s => (
-                        <tr key={s.maSV}>
-                            <td>{s.maSV}</td>
-                            <td>{s.hoTen}</td>
-                            <td>{s.soDT}</td>
-                            <td>{s.email}</td>
-                            <td>
+                        <tr key={s.maSV} className="text-center hover:bg-gray-50">
+                            <td className="border border-gray-300 px-4 py-2">{s.maSV}</td>
+                            <td className="border border-gray-300 px-4 py-2">{s.hoTen}</td>
+                            <td className="border border-gray-300 px-4 py-2">{s.soDT}</td>
+                            <td className="border border-gray-300 px-4 py-2">{s.email}</td>
+
+                            <td className="border border-gray-300 px-4 py-2 flex justify-center gap-2">
                                 <button
-                                    className="btn btn-warning mr-2"
+                                    className="px-3 py-1 bg-yellow-400 text-white rounded hover:bg-yellow-500 transition"
                                     onClick={() => dispatch(setEditingStudent(s))}
                                 >
                                     Sửa
                                 </button>
 
                                 <button
-                                    className="btn btn-danger"
+                                    className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600 transition"
                                     onClick={() => dispatch(deleteStudent(s.maSV))}
                                 >
                                     Xoá
@@ -55,6 +56,7 @@ export default function StudentList() {
                     ))}
                 </tbody>
             </table>
+
 
         </div>
     );
